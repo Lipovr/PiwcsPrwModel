@@ -4,8 +4,8 @@
 #include "fwd.h"
 #include "metadata.h"
 #include "util.h"
-#include <iosfwd>
 #include <array>
+#include <iosfwd>
 
 /**
  * @file
@@ -231,6 +231,7 @@ static constexpr SlotId STRAIGHT = 1;
  */
 static constexpr SlotId DIVERGING = 2;
 
+// clang-format off: maintain readability
 /**
  * std::array of all possible node types.
  */
@@ -243,6 +244,7 @@ inline static const std::array<NodeType, 7> nodeTypes = {
         CROSSING,
         END,
     };
+// clang-format on
 
 } // namespace piwcs::prw
 
