@@ -45,15 +45,7 @@ void parseNodeType(NodeData &nd, value v) {
     std::string_view declar;
     v.to(declar);
 
-    for (const auto *type : {
-             THRU,
-             MOTORIZED,
-             PASSIVE,
-             FIXED,
-             MANUAL,
-             CROSSING,
-             END,
-         }) {
+    for (const auto *type : nodeTypes) {
         if (type->name == declar) {
             nd.type = type;
             return;

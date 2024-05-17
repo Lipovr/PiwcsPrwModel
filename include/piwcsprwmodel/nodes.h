@@ -5,6 +5,7 @@
 #include "metadata.h"
 #include "util.h"
 #include <iosfwd>
+#include <array>
 
 /**
  * @file
@@ -229,6 +230,19 @@ static constexpr SlotId STRAIGHT = 1;
  * SlotId of the diverging track.
  */
 static constexpr SlotId DIVERGING = 2;
+
+/**
+ * std::array of all possible node types.
+ */
+inline static const std::array<NodeType, 7> nodeTypes = {
+        THRU,
+        MOTORIZED,
+        PASSIVE,
+        FIXED,
+        MANUAL,
+        CROSSING,
+        END,
+    };
 
 } // namespace piwcs::prw
 
