@@ -133,7 +133,7 @@ class Section : public detail::HasMetadata {
     /**
      * Returns `true` iff the Section allows the travel of routed trains.
      *
-     * @return whether this Section is unidirectional or bidirectional
+     * @return 'true' iff this Section is unidirectional or bidirectional
      */
     [[nodiscard]] bool allowsTravel() const {
         return m_dir != AllowedTravel::NONE;
